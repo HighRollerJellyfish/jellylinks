@@ -44,7 +44,7 @@ app.controller('ForumCtrl', function($scope, $stateParams, ForumsFactory, $fireb
   $scope.polls = ForumsFactory.getPolls($scope.forumKey);
 
   $scope.pollAvailable = function() {
-    if($scope.polls[0]){
+    if($scope.polls[0] && $scope.polls[0].active){
       return true;
     } else {
       return false;
