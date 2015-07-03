@@ -226,7 +226,7 @@ app.directive('ngPendingQuestion', function() {
     '</div>' +
     '<img class="question-user-picture" src = "{{question.picture}}">' +
     '<p class="question-name">{{question.name}}</p>' +
-    '<p class="question-githubID">{{question.githubID}}</p>' +
+    '<a class="question-githubID" href="{{question.userUrl}}">{{question.githubID}}</a>' +
   '</div>',
    link: function($scope, element, attribute) {
       $scope.upVote = function(event) {
@@ -281,7 +281,7 @@ app.directive('ngAnsweredQuestion', function() {
       '</div>' +
      '<img class="question-user-picture" src = "{{question.picture}}">' +
      '<p class="question-name">{{question.name}}</p>' +
-     '<p class="question-githubID">{{question.githubID}}</p>' +
+     '<a class="question-githubID" href="{{question.userUrl}}">{{question.githubID}}</a>' +
     '</div>',
   };
 });
